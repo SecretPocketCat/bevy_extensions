@@ -1,6 +1,6 @@
 [package]
 name = "bevy_extensions"
-version = "0.1"
+version = "0.1.0"
 authors = ["SecretPocketCat <jiridexterhanc@gmail.com>"]
 edition = "2021"
 
