@@ -1,6 +1,6 @@
 [package]
-name = "ld49"
-version = "0.0.1"
+name = "bevy_extensions"
+version = "0.1"
 authors = ["SecretPocketCat <jiridexterhanc@gmail.com>"]
 edition = "2021"
 
