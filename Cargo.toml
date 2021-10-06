@@ -1,0 +1,11 @@
+[package]
+name = "ld49"
+version = "0.0.1"
+authors = ["SecretPocketCat <jiridexterhanc@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+bevy = { git = "https://github.com/bevyengine/bevy", rev = "07ed1d053e7946a116ce3eef273fc93dd246f49d" }
+
+[dev-dependencies]
+pretty_assertions = "0.7.2"
