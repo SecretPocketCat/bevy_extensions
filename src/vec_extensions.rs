@@ -1,4 +1,4 @@
-use bevy::math::*;
+use bevy::math::{IVec2, IVec3, UVec2, UVec3, Vec2, Vec3};
 
 macro_rules! impl_vec2_extensions {
     ($t: ty, $axis_t: ty) => {
