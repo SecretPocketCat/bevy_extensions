@@ -5,7 +5,7 @@ authors = ["SecretPocketCat <jiridexterhanc@gmail.com>"]
 edition = "2021"
 
 [dependencies]
-bevy = { git = "https://github.com/bevyengine/bevy", branch = "main", default-features = false }
+bevy = { version = "0.6.1", default-features = false }
 
 [dev-dependencies]
 pretty_assertions = "1.0.0"
