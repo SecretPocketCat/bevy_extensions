@@ -1,6 +1,4 @@
-#![feature(destructuring_assignment)]
 #![feature(if_let_guard)]
-
 #![warn(clippy::pedantic)]
 #![allow(clippy::default_trait_access)]
 #![allow(clippy::module_name_repetitions)]
@@ -9,8 +7,10 @@
 #![allow(clippy::too_many_arguments)]
 #![allow(clippy::type_complexity)]
 
-mod vec_extensions;
 mod error_handling;
+mod math;
+mod vec_extensions;
 
-pub use vec_extensions::{Vec2Conversion, Vec2Extensions, VecAxis};
-pub use error_handling::panic_on_error;
+pub use error_handling::*;
+pub use math::*;
+pub use vec_extensions::*;
