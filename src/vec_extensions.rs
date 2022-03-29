@@ -43,10 +43,14 @@ macro_rules! impl_vec2_extensions {
 }
 
 macro_rules! impl_vec2_conversion {
-    ($t: ty, $vec3_t: ty, $z: expr) => {
+    ($t: ty, $vec3_t: ty, $z: expr, $z1: expr) => {
         impl Vec2Conversion<$vec3_t> for $t {
             fn to_vec3(&self) -> $vec3_t {
                 <$vec3_t>::new(self.x, self.y, $z)
+            }
+
+            fn to_vec3_z1(&self) -> $vec3_t {
+                <$vec3_t>::new(self.x, self.y, $z1)
             }
         }
     };
@@ -70,14 +74,15 @@ pub trait Vec2Extensions {
 
 pub trait Vec2Conversion<TVec3> {
     fn to_vec3(&self) -> TVec3;
+    fn to_vec3_z1(&self) -> TVec3;
 }
 
 impl_vec2_extensions!(Vec2, f32);
-impl_vec2_conversion!(Vec2, Vec3, 0.);
+impl_vec2_conversion!(Vec2, Vec3, 0., 1.);
 impl_vec2_extensions!(IVec2, i32);
-impl_vec2_conversion!(IVec2, IVec3, 0);
+impl_vec2_conversion!(IVec2, IVec3, 0, 1);
 impl_vec2_extensions!(UVec2, u32);
-impl_vec2_conversion!(UVec2, UVec3, 0);
+impl_vec2_conversion!(UVec2, UVec3, 0, 1);
 
 #[cfg(test)]
 mod tests {
@@ -112,5 +117,12 @@ mod tests {
         let vec = Vec2::new(1., 2.);
 
         assert_eq!(Vec3::new(vec.x, vec.y, 0.), vec.to_vec3());
+    }
+
+    #[test]
+    fn to_vec3_z1() {
+        let vec = Vec2::new(1., 2.);
+
+        assert_eq!(Vec3::new(vec.x, vec.y, 1.), vec.to_vec3_z1());
     }
 }
