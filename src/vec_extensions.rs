@@ -61,12 +61,14 @@ pub trait VecAxis<TAxis> {
 
     fn get_axis_value_mut(&mut self, is_horizontal: bool) -> &mut TAxis;
 
+    #[must_use]
     fn get_axis(&self, is_horizontal: bool) -> Self
     where
         Self: Sized + Copy;
 }
 
 pub trait Vec2Extensions {
+    #[must_use]
     fn transpose(&self) -> Self
     where
         Self: Sized;
