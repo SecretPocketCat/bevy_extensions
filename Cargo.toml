@@ -1,11 +1,11 @@
 [package]
 name = "bevy_extensions"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["SecretPocketCat <jiridexterhanc@gmail.com>"]
 edition = "2021"
 
 [dependencies]
-bevy = { version = "0.7.0", default-features = false }
+bevy = { version = "0.8.0", default-features = false }
 
 [dev-dependencies]
 pretty_assertions = "1.0.0"
